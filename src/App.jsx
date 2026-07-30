@@ -242,7 +242,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    <div className="app-container" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100vw' }}>
 
       {/* Fixed Top Left Logo */}
       <div className="logo-container">

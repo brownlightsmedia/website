@@ -780,3 +780,16 @@ button, input, select, textarea {
   }
 }
 
+
+.app-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
