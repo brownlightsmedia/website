@@ -90,7 +90,7 @@ ${scheduleSummary}
       
       // WhatsApp Number placeholder (will be replaced by user later)
       const encoded = encodeURIComponent(payload);
-      window.open(`https://wa.me/917034177708?text=${encoded}`, '_blank');
+      window.open(`https://wa.me/918848839266?text=${encoded}`, '_blank');
       
       if (onNavigateToContact) {
           onNavigateToContact();
