@@ -748,3 +748,35 @@ button, input, select, textarea {
   }
 }
 
+
+@media (max-width: 768px) {
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  .sketchbook-viewport {
+    position: relative !important;
+    overflow: visible !important;
+    height: auto !important;
+    perspective: none !important;
+    display: block !important;
+  }
+
+  .sketchbook-page {
+    position: relative !important;
+    overflow: visible !important;
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    filter: none !important;
+    padding-top: 80px !important;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .sketchbook-page:first-child {
+    padding-top: 0 !important;
+  }
+}
+
