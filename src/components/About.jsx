@@ -15,7 +15,7 @@ export default function About() {
               overflow: 'hidden',
               height: '480px',
               boxShadow: '0 20px 45px rgba(18, 18, 18, 0.1)',
-              backgroundImage: 'url(/assets/images/ABOUT.jpg)',
+              backgroundImage: 'url(/website/assets/images/ABOUT.jpg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} />
