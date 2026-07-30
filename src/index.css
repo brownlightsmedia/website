@@ -647,8 +647,7 @@ button, input, select, textarea {
 .logo-img {
   height: 120px;
   width: auto;
-  filter: grayscale(100%) contrast(500%) invert(1);
-  mix-blend-mode: screen;
+  filter: invert(1);
 }
 
 /* Mobile Hamburger Menu */
@@ -743,8 +742,7 @@ button, input, select, textarea {
   }
   .logo-img {
     height: 60px !important; 
-    filter: grayscale(100%) contrast(500%) invert(1) !important; 
-    mix-blend-mode: screen !important;
+    filter: invert(1) !important;
   }
 }
 
@@ -752,5 +750,31 @@ button, input, select, textarea {
 .app-container {
   height: 100vh;
   overflow: hidden;
+}
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+.mobile-hamburger-wrapper {
+  z-index: 9999 !important;
+}
+.hamburger-btn {
+  position: relative !important;
+  z-index: 10001 !important;
+}
+.mobile-menu-overlay {
+  z-index: 10000 !important;
 }
 

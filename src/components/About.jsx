@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="section-padding" id="about" style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="about-grid">
           
           {/* Left Image Stack */}
           <div style={{ position: 'relative' }}>
