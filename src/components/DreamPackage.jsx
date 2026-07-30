@@ -71,7 +71,7 @@ export default function DreamPackage({ onCheckout }) {
     <div style={{ background: 'var(--bg-secondary)', borderRadius: '20px', padding: '3rem', border: '1px solid var(--border-light)' }}>
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <span className="section-tag">FULLY CUSTOM</span>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '3.5rem', color: 'var(--text-primary)', marginBottom: '0.5rem', fontWeight: 500 }}>Dream Package</h2>
+          <h2 style={{ fontFamily: "'Great Vibes', cursive", fontSize: '4.5rem', color: 'var(--text-primary)', marginBottom: '0.5rem', fontWeight: 400 }}>Dream Package</h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             Build your perfect wedding experience from the ground up.
           </p>

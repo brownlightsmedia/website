@@ -2,43 +2,36 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const imagesDir = path.join(__dirname, 'public', 'assets', 'images');
-
-async function processDirectory(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+async function processDirectory(directory) {
+  const files = fs.readdirSync(directory);
+  
+  for (const file of files) {
+    const fullPath = path.join(directory, file);
+    const stat = fs.statSync(fullPath);
     
-    if (entry.isDirectory()) {
+    if (stat.isDirectory()) {
       await processDirectory(fullPath);
-    } else if (entry.isFile() && /\.(jpg|jpeg|png|JPG|JPEG)$/.test(entry.name)) {
+    } else if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png')) {
+      const tempPath = fullPath + '.tmp';
       try {
-        const metadata = await sharp(fullPath).metadata();
-        const stat = fs.statSync(fullPath);
-        
-        // If the image is wide (larger than 1600) or file size > 800KB, resize and compress
-        if (metadata.width > 1600 || stat.size > 800000) {
-          console.log(`Compressing: ${fullPath} (${(stat.size / 1024 / 1024).toFixed(2)} MB)`);
-          const tmpPath = fullPath + '.tmp';
+        await sharp(fullPath)
+          .resize({ width: 1200, withoutEnlargement: true })
+          .jpeg({ quality: 60, progressive: true })
+          .toFile(tempPath);
           
-          await sharp(fullPath)
-            .resize(1600, null, {
-              withoutEnlargement: true,
-              fit: 'inside'
-            })
-            .jpeg({ quality: 80, progressive: true })
-            .toFile(tmpPath);
-            
-          fs.renameSync(tmpPath, fullPath);
-        }
+        // Replace original with compressed version
+        fs.unlinkSync(fullPath);
+        fs.renameSync(tempPath, fullPath);
+        console.log(`Compressed: ${fullPath}`);
       } catch (err) {
-        console.error(`Error processing ${fullPath}:`, err.message);
+        console.error(`Error compressing ${fullPath}:`, err.message);
       }
     }
   }
 }
 
+const imagesDir = path.join(__dirname, 'public', 'assets', 'images');
+console.log('Starting compression...');
 processDirectory(imagesDir).then(() => {
-  console.log('Image compression complete.');
+  console.log('Compression complete.');
 });

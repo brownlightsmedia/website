@@ -73,7 +73,7 @@ export default function Footer() {
             CONTACT DETAILS
           </h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Phone size={14} color="#C69B66" /> +91 98765 43210</li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Phone size={14} color="#C69B66" /> +91 70341 77708</li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Mail size={14} color="#C69B66" /> hello@brownlightmedia.com</li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><MapPin size={14} color="#C69B66" /> Kerala, India & Worldwide</li>
           </ul>

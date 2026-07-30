@@ -76,7 +76,7 @@ New Studio Inquiry:
                   </div>
                   <div>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, letterSpacing: '0.1em' }}>DIRECT CALL & WHATSAPP</span>
-                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>+91 98765 43210</h4>
+                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>+91 70341 77708</h4>
                   </div>
                 </div>
 
