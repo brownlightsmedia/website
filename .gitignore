@@ -36,3 +36,5 @@ dist-ssr
 *.MP4
 *.mov
 *.MOV
+
+!hero-bg-compressed.mp4
