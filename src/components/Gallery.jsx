@@ -415,9 +415,9 @@ export default function Gallery({ onOpenLightbox }) {
     // Let's rely on the paths!
     const realMap = {};
     galleryPhotos.forEach(photo => {
-      // extract couple name from the path: /assets/images/couple name/...
+      // extract couple name from the path: /website/assets/images/couple name/...
       const parts = photo.src.split('/');
-      const encodedCoupleName = parts[3];
+      const encodedCoupleName = parts[4];
       if (encodedCoupleName) {
         const coupleName = decodeURIComponent(encodedCoupleName);
         const formattedName = coupleName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -440,7 +440,7 @@ export default function Gallery({ onOpenLightbox }) {
     if (!activeAlbum) return [];
     return galleryPhotos.filter(photo => {
       const parts = photo.src.split('/');
-      const encodedCoupleName = parts[3];
+      const encodedCoupleName = parts[4];
       if (!encodedCoupleName) return false;
       const coupleName = decodeURIComponent(encodedCoupleName);
       const formattedName = coupleName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
