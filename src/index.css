@@ -159,6 +159,7 @@ button, input, select, textarea {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   transform-origin: top center;
   transition: transform 0.85s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.85s ease, filter 0.85s ease;
   backface-visibility: hidden;
@@ -634,3 +635,114 @@ button, input, select, textarea {
 @keyframes revealContent {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+/* Logo Styling */
+.logo-container {
+  position: fixed;
+  top: 1.2rem;
+  left: 2rem;
+  z-index: 100;
+}
+
+.logo-img {
+  height: 120px;
+  width: auto;
+  filter: invert(1);
+}
+
+/* Mobile Hamburger Menu */
+.mobile-hamburger-wrapper {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+.hamburger-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(198, 155, 102, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background: rgba(198, 155, 102, 0.1);
+  border-color: rgba(198, 155, 102, 0.6);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 12, 16, 0.95);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu-list li {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-list li.active,
+.mobile-menu-list li:hover {
+  color: var(--accent-gold);
+}
+
+.mobile-menu-list li.booking-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--accent-gold);
+  border-radius: 30px;
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .bubble-menu-wrapper {
+    display: none !important;
+  }
+  .mobile-hamburger-wrapper {
+    display: block;
+  }
+  .logo-container {
+    background: transparent !important; 
+    top: 1rem;
+    left: 1rem;
+  }
+  .logo-img {
+    height: 60px !important; 
+    filter: none; 
+  }
+}
+

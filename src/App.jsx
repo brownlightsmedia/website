@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import BubbleMenu from './components/BubbleMenu';
+import MobileHamburgerMenu from './components/MobileHamburgerMenu';
 import Hero from './components/Hero';
 import About from './components/About';
 import Gallery from './components/Gallery';
@@ -244,8 +245,8 @@ export default function App() {
     <div style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100vw', height: '100vh', overflow: 'hidden' }}>
 
       {/* Fixed Top Left Logo */}
-      <div style={{ position: 'fixed', top: '1.2rem', left: '2rem', zIndex: 100 }}>
-        <img src="/website/assets/images/logo.png" alt="Brownlight Media" style={{ height: '120px', width: 'auto', filter: 'invert(1)' }} />
+      <div className="logo-container">
+        <img src="/website/assets/images/logo.png" alt="Brownlight Media" className="logo-img" />
       </div>
 
       {/* Floating Capsule Top Navbar */}
@@ -253,6 +254,23 @@ export default function App() {
         activePageIndex={activePageIndex}
         onNavigate={(idx) => turnSketchbookPageTo(idx)}
         onOpenBooking={handleOpenBooking} 
+      />
+      
+      {/* Mobile Hamburger Navbar */}
+      <MobileHamburgerMenu 
+        activePageIndex={activePageIndex}
+        onNavigate={(idx) => turnSketchbookPageTo(idx)}
+        onOpenBooking={handleOpenBooking}
+        navItems={[
+          { label: 'HOME', href: '#hero' },
+          { label: 'ABOUT', href: '#about' },
+          { label: 'GALLERY', href: '#gallery' },
+          { label: 'HIGHLIGHTS', href: '#highlights' },
+          { label: 'PACKAGES', href: '#packages' },
+          { label: 'REACTIONS', href: '#testimonials' },
+          { label: 'CONTACT', href: '#contact' },
+          { label: 'LEGAL', href: '#legal' }
+        ]}
       />
 
       {/* 3D Portrait Sketchbook Viewport */}
