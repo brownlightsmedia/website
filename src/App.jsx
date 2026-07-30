@@ -89,9 +89,10 @@ export default function App() {
     }, 850);
   };
 
-  // Handle Wheel Scroll for 3D Sketchbook Turning
+  // Handle Wheel and Touch Scroll for 3D Sketchbook Turning
   useEffect(() => {
     let lastWheelTime = 0;
+    let touchStartY = 0;
 
     const handleWheel = (e) => {
       if (document.querySelector('.modal.active') || document.querySelector('.lightbox-content') || document.querySelector('.gallery-album-active')) return;
@@ -117,8 +118,49 @@ export default function App() {
       }
     };
 
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (document.querySelector('.modal.active') || document.querySelector('.lightbox-content') || document.querySelector('.gallery-album-active')) return;
+      const currentPageEl = pageRefs.current[activePageIndex];
+      if (!currentPageEl) return;
+
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = touchStartY - touchEndY; // Positive means swipe up (scroll down)
+      
+      const now = Date.now();
+      if (now - lastWheelTime < 600) return;
+
+      const isAtBottom = currentPageEl.scrollHeight - currentPageEl.scrollTop <= currentPageEl.clientHeight + 15;
+      const isAtTop = currentPageEl.scrollTop <= 5;
+
+      // Swipe Up (deltaY > 50) at bottom of page
+      if (deltaY > 50 && isAtBottom) {
+        if (activePageIndex < pagesCount - 1) {
+          lastWheelTime = now;
+          turnSketchbookPageTo(activePageIndex + 1);
+        }
+      } 
+      // Swipe Down (deltaY < -50) at top of page
+      else if (deltaY < -50 && isAtTop) {
+        if (activePageIndex > 0) {
+          lastWheelTime = now;
+          turnSketchbookPageTo(activePageIndex - 1);
+        }
+      }
+    };
+
     window.addEventListener('wheel', handleWheel, { passive: true });
-    return () => window.removeEventListener('wheel', handleWheel);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
   }, [activePageIndex]);
 
   // Handle Keyboard Arrows for 3D Sketchbook Turning
