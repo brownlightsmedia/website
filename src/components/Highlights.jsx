@@ -9,17 +9,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const videoItems = [
-  { text: '1 MINUTE POST', videoUrl: '/assets/video/1 MINUTE POST.mp4', imageUrl: '/assets/images/afu & manna/BLM08020.jpg' },
-  { text: 'IMG 1168', videoUrl: '/assets/video/IMG_1168.MP4', imageUrl: '/assets/images/anu & vishnu/anu_post_1.jpg' },
-  { text: 'Timeline 1', videoUrl: '/assets/video/Timeline 1.mp4', imageUrl: '/assets/images/arjun & nithya/IMG_6932 2.JPG' },
-  { text: 'Anu Vishnu', videoUrl: '/assets/video/anu vishnu.mp4', imageUrl: '/assets/images/anu & vishnu/DSC00022.jpg' },
-  { text: 'Arjun Reel', videoUrl: '/assets/video/arjun reel .MP4', imageUrl: '/assets/images/arjun & nithya/IMG_6941 2.JPG' },
-  { text: 'Ashiq Tie Lie', videoUrl: '/assets/video/ashiq tie lie.MP4', imageUrl: '/assets/images/ashfak & siya/DSC02008.jpg' },
-  { text: 'Hana Day', videoUrl: '/assets/video/hana day.MP4', imageUrl: '/assets/images/manasa/1.JPEG' },
-  { text: 'Highlight 1', videoUrl: '/assets/video/highlight (1).MP4', imageUrl: '/assets/images/shahin & fathima/DSC00019.jpg' },
-  { text: 'Highlight 2', videoUrl: '/assets/video/highlight video 2.MP4', imageUrl: '/assets/images/shahzad & fiza/DSC01444.jpg' },
-  { text: 'Highlight 3', videoUrl: '/assets/video/highlight.MP4', imageUrl: '/assets/images/siyad & safna/DSC00004.jpg' },
-  { text: 'Javedh Post Reel', videoUrl: '/assets/video/javedh post reel 2.mp4', imageUrl: '/assets/images/afu & manna/DSC08454.jpg' },
+  { text: '1 MINUTE POST', videoUrl: '/website/assets/video/1 MINUTE POST.mp4', imageUrl: '/website/assets/images/afu & manna/BLM08020.jpg' },
+  { text: 'IMG 1168', videoUrl: '/website/assets/video/IMG_1168.MP4', imageUrl: '/website/assets/images/anu & vishnu/anu_post_1.jpg' },
+  { text: 'Timeline 1', videoUrl: '/website/assets/video/Timeline 1.mp4', imageUrl: '/website/assets/images/arjun & nithya/IMG_6932 2.JPG' },
+  { text: 'Anu Vishnu', videoUrl: '/website/assets/video/anu vishnu.mp4', imageUrl: '/website/assets/images/anu & vishnu/DSC00022.jpg' },
+  { text: 'Arjun Reel', videoUrl: '/website/assets/video/arjun reel .MP4', imageUrl: '/website/assets/images/arjun & nithya/IMG_6941 2.JPG' },
+  { text: 'Ashiq Tie Lie', videoUrl: '/website/assets/video/ashiq tie lie.MP4', imageUrl: '/website/assets/images/ashfak & siya/DSC02008.jpg' },
+  { text: 'Hana Day', videoUrl: '/website/assets/video/hana day.MP4', imageUrl: '/website/assets/images/manasa/1.JPEG' },
+  { text: 'Highlight 1', videoUrl: '/website/assets/video/highlight (1).MP4', imageUrl: '/website/assets/images/shahin & fathima/DSC00019.jpg' },
+  { text: 'Highlight 2', videoUrl: '/website/assets/video/highlight video 2.MP4', imageUrl: '/website/assets/images/shahzad & fiza/DSC01444.jpg' },
+  { text: 'Highlight 3', videoUrl: '/website/assets/video/highlight.MP4', imageUrl: '/website/assets/images/siyad & safna/DSC00004.jpg' },
+  { text: 'Javedh Post Reel', videoUrl: '/website/assets/video/javedh post reel 2.mp4', imageUrl: '/website/assets/images/afu & manna/DSC08454.jpg' },
 ];
 
 export default function Highlights({ onOpenVideo }) {

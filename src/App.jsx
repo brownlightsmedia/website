@@ -245,7 +245,7 @@ export default function App() {
 
       {/* Fixed Top Left Logo */}
       <div style={{ position: 'fixed', top: '1.2rem', left: '2rem', zIndex: 100 }}>
-        <img src="/assets/images/logo.png" alt="Brownlight Media" style={{ height: '120px', width: 'auto', filter: 'invert(1)' }} />
+        <img src="/website/assets/images/logo.png" alt="Brownlight Media" style={{ height: '120px', width: 'auto', filter: 'invert(1)' }} />
       </div>
 
       {/* Floating Capsule Top Navbar */}

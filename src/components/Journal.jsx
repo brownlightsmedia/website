@@ -7,7 +7,7 @@ const journalPosts = [
     title: 'The Art of Destination Weddings in Kerala',
     category: 'DESTINATION GUIDE',
     readTime: '5 Min Read',
-    image: '/assets/images/portfolio1.jpg',
+    image: '/website/assets/images/portfolio1.jpg',
     excerpt: 'From backwater coconut groves in Kumarakom to misty tea gardens in Munnar, discover top venues and photography secrets for destination weddings in Kerala.'
   },
   {
@@ -15,7 +15,7 @@ const journalPosts = [
     title: 'Mastering Golden Hour Lighting for Evening Pheras',
     category: 'PHOTOGRAPHY INSIGHTS',
     readTime: '4 Min Read',
-    image: '/assets/images/hero.jpg',
+    image: '/website/assets/images/hero.jpg',
     excerpt: 'How we manipulate low-angle natural light and warm ambient torches to craft painterly portraits during evening outdoor mandap ceremonies.'
   },
   {
@@ -23,7 +23,7 @@ const journalPosts = [
     title: 'Why Handcrafted Leather Albums Outlast Digital Files',
     category: 'HERITAGE PRINTS',
     readTime: '6 Min Read',
-    image: '/assets/images/portfolio3.jpg',
+    image: '/website/assets/images/portfolio3.jpg',
     excerpt: 'A deep dive into archival luster papers, flush-mount binding, and custom leather covers built to preserve family legacies across decades.'
   }
 ];

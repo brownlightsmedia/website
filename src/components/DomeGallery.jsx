@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 
 const domeImages = [
-  { src: '/assets/images/hero.jpg', title: 'Royal Udaipur Vows', tag: 'Destination' },
-  { src: '/assets/images/about.jpg', title: 'Candid Laughter', tag: 'Emotional' },
-  { src: '/assets/images/portfolio1.jpg', title: 'Sunset Serenade', tag: 'Pre-Wedding' },
-  { src: '/assets/images/portfolio2.jpg', title: 'Haldi Celebration', tag: 'Traditional' },
-  { src: '/assets/images/portfolio3.jpg', title: 'Palace Night Mandap', tag: 'Royal' },
-  { src: '/assets/images/film.jpg', title: 'Cinematic Moments', tag: 'Film Frame' },
+  { src: '/website/assets/images/hero.jpg', title: 'Royal Udaipur Vows', tag: 'Destination' },
+  { src: '/website/assets/images/about.jpg', title: 'Candid Laughter', tag: 'Emotional' },
+  { src: '/website/assets/images/portfolio1.jpg', title: 'Sunset Serenade', tag: 'Pre-Wedding' },
+  { src: '/website/assets/images/portfolio2.jpg', title: 'Haldi Celebration', tag: 'Traditional' },
+  { src: '/website/assets/images/portfolio3.jpg', title: 'Palace Night Mandap', tag: 'Royal' },
+  { src: '/website/assets/images/film.jpg', title: 'Cinematic Moments', tag: 'Film Frame' },
 ];
 
 export default function DomeGallery() {

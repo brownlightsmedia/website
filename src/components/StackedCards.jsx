@@ -10,7 +10,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'DESTINATION WEDDING',
-    image: '/assets/images/about.jpg',
+    image: '/website/assets/images/about.jpg',
     storyExcerpt: 'Surrounded by heritage and tradition, Shahabaz and Shahina celebrated their beautiful union with their closest family and friends.',
     features: ['3-Day Coverage', '2 Photographers', '2 Cinematographers', 'Aerial Drone Cinema', 'Handcrafted Heirloom Book']
   },
@@ -21,7 +21,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'BEACHFRONT CEREMONY',
-    image: '/assets/images/anu & vishnu/IMG_5667.jpg',
+    image: '/website/assets/images/anu & vishnu/IMG_5667.jpg',
     storyExcerpt: 'An intimate barefoot beach wedding as dusk set over the sea, featuring acoustic live music and organic golden hour portraits.',
     features: ['2-Day Coverage', '2 Photographers', '1 Cinematographer', 'AI Instant QR Sharing', 'Mini Parent Albums']
   },
@@ -32,7 +32,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'HERITAGE CELEBRATION',
-    image: '/assets/images/manasa/1.JPEG',
+    image: '/website/assets/images/manasa/1.JPEG',
     storyExcerpt: 'Grand traditional rituals framed under historic chandeliers and vintage arches, capturing four generations of family reunions.',
     features: ['4-Day Coverage', '3 Photographers', '3 Cinematographers', 'Live Broadcast Feed', '140-Page Master Book']
   },
@@ -43,7 +43,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'INTIMATE WEDDING',
-    image: '/assets/images/akshay & nivya/IMG_2098.JPG',
+    image: '/website/assets/images/akshay & nivya/IMG_2098.JPG',
     storyExcerpt: 'A serene celebration along the backwaters, reflecting the calm and deep love Akshay and Nivya share for each other.',
     features: ['2-Day Coverage', '2 Photographers', '2 Cinematographers', 'Drone Cinema', 'Luxury Album']
   },
@@ -54,7 +54,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'CITY WEDDING',
-    image: '/assets/images/portfolio1.jpg',
+    image: '/website/assets/images/portfolio1.jpg',
     storyExcerpt: 'A modern, chic city wedding with stunning architectural backdrops and an unforgettable evening reception.',
     features: ['1-Day Coverage', '1 Photographer', '1 Cinematographer', 'Social Reels', 'Standard Book']
   },
@@ -65,7 +65,7 @@ const storyDeck = [
     location: 'Kerala, India',
     date: 'Recent',
     category: 'DESTINATION WEDDING',
-    image: '/assets/images/shahzad & fiza/IMG_5587.jpg',
+    image: '/website/assets/images/shahzad & fiza/IMG_5587.jpg',
     storyExcerpt: 'A breathtaking celebration of love, filled with laughter, tears of joy, and a promise that lasts a lifetime.',
     features: ['3-Day Coverage', '2 Photographers', '2 Cinematographers', 'Teaser Reel', 'Master Book']
   }

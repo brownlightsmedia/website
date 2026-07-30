@@ -33,7 +33,7 @@ export default function Hero({ onOpenVideo }) {
           zIndex: 1
         }}
       >
-        <source src="/assets/video/hero-bg-compressed.mp4" type="video/mp4" />
+        <source src="/website/assets/video/hero-bg-compressed.mp4" type="video/mp4" />
       </video>
 
       {/* Translucent Dark Gradient Overlay for Readability */}

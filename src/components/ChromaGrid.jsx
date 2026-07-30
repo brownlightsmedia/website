@@ -9,7 +9,7 @@ const portfolioItems = [
     text: 'Royal Udaipur Vows', 
     location: 'Udaipur, Rajasthan',
     category: 'Destination Wedding',
-    image: '/assets/images/hero.jpg',
+    image: '/website/assets/images/hero.jpg',
     features: ['Multi-Day Palace Coverage', 'Full Senior 6-Crew Team', '4K Aerial Drone Cinema', 'Handcrafted Leather Album']
   },
   { 
@@ -18,7 +18,7 @@ const portfolioItems = [
     text: 'Sunset Serenade', 
     location: 'Kerala Coast',
     category: 'Pre-Wedding Shoot',
-    image: '/assets/images/portfolio1.jpg',
+    image: '/website/assets/images/portfolio1.jpg',
     features: ['Golden Hour Beach Session', 'Candid Outdoor Styling', 'Cinematic Highlight Teaser', 'Digital High-Res Gallery']
   },
   { 
@@ -27,7 +27,7 @@ const portfolioItems = [
     text: 'Intimate Joy', 
     location: 'Kochi, Kerala',
     category: 'Engagement Ceremony',
-    image: '/assets/images/about.jpg',
+    image: '/website/assets/images/about.jpg',
     features: ['Candid Ceremony Coverage', 'Traditional & Contemporary Portraits', 'Private Online Gallery Preview', 'Fine-Art Editing']
   },
   { 
@@ -36,7 +36,7 @@ const portfolioItems = [
     text: 'Palace Mandap', 
     location: 'Jaipur, Rajasthan',
     category: 'Royal Celebration',
-    image: '/assets/images/portfolio3.jpg',
+    image: '/website/assets/images/portfolio3.jpg',
     features: ['Night Mandap Illumination', 'Heritage Architecture Backdrops', 'High-Dynamic Cinema Color Grading', 'Luster Printed Hardbound Book']
   },
   { 
@@ -45,7 +45,7 @@ const portfolioItems = [
     text: 'Haldi Celebration', 
     location: 'Calicut, Kerala',
     category: 'Traditional Rituals',
-    image: '/assets/images/portfolio2.jpg',
+    image: '/website/assets/images/portfolio2.jpg',
     features: ['Vibrant Marigold & Color Shots', 'Candid Emotion Focus', 'Same-Day Edit Highlights', 'Raw High-Res Files License']
   },
   { 
@@ -54,7 +54,7 @@ const portfolioItems = [
     text: 'Destination Vows', 
     location: 'Dubai, UAE',
     category: 'International Destination',
-    image: '/assets/images/film.jpg',
+    image: '/website/assets/images/film.jpg',
     features: ['Desert & Skyline Sunset Shoots', 'Full Film & Cinema Teasers', 'Dual Senior Photographers', 'Luxury Canvas Prints']
   },
 ];
