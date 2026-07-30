@@ -648,6 +648,7 @@ button, input, select, textarea {
   height: 120px;
   width: auto;
   filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 /* Mobile Hamburger Menu */
@@ -742,7 +743,8 @@ button, input, select, textarea {
   }
   .logo-img {
     height: 60px !important; 
-    filter: none; 
+    filter: invert(1) !important; 
+    mix-blend-mode: screen !important;
   }
 }
 
