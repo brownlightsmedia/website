@@ -10,10 +10,9 @@ export default function About() {
           
           {/* Left Image Stack */}
           <div style={{ position: 'relative' }}>
-            <div className="bw-image" style={{
+            <div className="bw-image about-image" style={{
               borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
-              height: '480px',
               boxShadow: '0 20px 45px rgba(18, 18, 18, 0.1)',
               backgroundImage: 'url(/website/assets/images/ABOUT.jpg)',
               backgroundSize: 'cover',
@@ -38,7 +37,7 @@ export default function About() {
             </p>
 
             {/* Stats Row */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', borderTop: '1px solid var(--border-light)', paddingTop: '1.5rem' }}>
+            <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', borderTop: '1px solid var(--border-light)', paddingTop: '1.5rem' }}>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', color: 'var(--accent-gold)' }}>6+</h3>
                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)' }}>YEARS EXPERIENCE</span>
