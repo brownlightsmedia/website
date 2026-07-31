@@ -122,7 +122,7 @@ export default function DreamPackage({ onCheckout }) {
                       className={(option === 'more' && isCustomDays) || (!isCustomDays && numDays === option) ? 'btn btn-gold' : 'btn btn-outline'}
                       style={{ flex: 1, padding: '0.8rem', minWidth: '80px' }}
                   >
-                      {option === 'more' ? '>4 Days' : `${option} Day${option > 1 ? 's' : ''}`}
+                      {option === 'more' ? 'More than 4 days' : `${option} Day${option > 1 ? 's' : ''}`}
                   </button>
               ))}
           </div>
