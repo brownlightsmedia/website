@@ -386,18 +386,6 @@ const galleryPhotos = [
 
 
 
-
-
-
-
-export default function Gallery({ onOpenLightbox }) {
-  const [activeAlbum, setActiveAlbum] = useState(null);
-  const [showAllAlbums, setShowAllAlbums] = useState(false);
-
-  // Generate unique albums based on photo title (couple name)
-  const albums = useMemo(() => {
-    const map = {};
-    galleryPhotos.forEach(photo => {
       // The first photo encountered for a title becomes the cover photo
       if (!map[photo.title] && photo.title !== '1' && photo.title !== '2' && photo.title !== '3') {
         map[photo.title] = {

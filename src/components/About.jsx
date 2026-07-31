@@ -40,19 +40,19 @@ export default function About() {
             <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', borderTop: '1px solid var(--border-light)', paddingTop: '1.5rem' }}>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', color: 'var(--accent-gold)' }}>6+</h3>
-                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-muted)' }}>YEARS OF EXPERIENCE</span>
+                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 400, color: 'var(--text-muted)' }}>YEARS OF EXPERIENCE</span>
               </div>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', color: 'var(--accent-gold)' }}>300+</h3>
-                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-muted)' }}>WEDDING FILMING</span>
+                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 400, color: 'var(--text-muted)' }}>WEDDING FILMING</span>
               </div>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', color: 'var(--accent-gold)' }}>12</h3>
-                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-muted)' }}>DESTINATIONS</span>
+                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 400, color: 'var(--text-muted)' }}>DESTINATIONS</span>
               </div>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', color: 'var(--accent-gold)' }}>100%</h3>
-                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-muted)' }}>CLIENT SATISFACTION</span>
+                <span style={{ fontFamily: 'var(--font-subtitle)', fontSize: '1.2rem', fontWeight: 400, color: 'var(--text-muted)' }}>CLIENT SATISFACTION</span>
               </div>
             </div>
           </div>

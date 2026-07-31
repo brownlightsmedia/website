@@ -319,7 +319,7 @@ export default function App() {
       <div className="sketchbook-viewport">
         {/* Page 0: HOME */}
         <div ref={el => pageRefs.current[0] = el} className={getPageClass(0)}>
-          <Hero onOpenVideo={() => setVideoModal({ title: 'Brownlight Media Showreel', url: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1' })} />
+          <Hero onNavigate={(idx) => turnSketchbookPageTo(idx)} onOpenVideo={() => setVideoModal({ title: 'Brownlight Media Showreel', url: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1' })} />
         </div>
 
         {/* Page 1: ABOUT */}
@@ -329,7 +329,7 @@ export default function App() {
 
         {/* Page 2: GALLERY */}
         <div ref={el => pageRefs.current[2] = el} className={getPageClass(2)}>
-          <Gallery onOpenLightbox={(photo) => setLightboxPhoto(photo)} />
+          <Gallery isActive={activePageIndex === 2} onOpenLightbox={(photo) => setLightboxPhoto(photo)} />
         </div>
 
         {/* Page 3: HIGHLIGHTS */}
