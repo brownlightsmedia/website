@@ -22,8 +22,9 @@
   --border-light: rgba(18, 18, 18, 0.12);
 
   /* Oaks Studio Fonts */
-  --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-heading: 'Didot', 'GFS Didot', serif;
+  --font-sans: 'Google Sans', 'Outfit', 'Space Grotesk', system-ui, sans-serif;
+  --font-subtitle: 'Bebas Neue', sans-serif;
   
   --radius-sm: 4px;
   --radius-md: 12px;
@@ -75,8 +76,8 @@ button, input, select, textarea {
 }
 
 .section-tag {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-family: var(--font-subtitle);
+  font-size: 1.1rem;
   letter-spacing: 0.3em;
   font-weight: 700;
   text-transform: uppercase;
