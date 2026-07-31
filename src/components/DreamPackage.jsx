@@ -158,7 +158,7 @@ export default function DreamPackage({ onCheckout }) {
                 {day.events.length > 0 && (
                     <div style={{ marginTop: '1.5rem' }}>
                         {day.events.map((ev, evIdx) => (
-                            <div key={ev.name} style={{ background: 'rgba(0,0,0,0.02)', padding: '1.2rem', borderRadius: '8px', marginBottom: '1rem' }}>
+                            <div key={evIdx} style={{ paddingBottom: '2rem', marginBottom: '2rem', borderBottom: '1px solid var(--border-light)' }}>
                                 <h5 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>{ev.name}</h5>
                                 
                                 {/* Time Inputs */}

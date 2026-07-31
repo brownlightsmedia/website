@@ -737,11 +737,11 @@ button, input, select, textarea {
   }
   .logo-container {
     background: transparent !important; 
-    top: 1rem;
+    top: 0.3rem;
     left: 1rem;
   }
   .logo-img {
-    height: 85px !important; 
+    height: 100px !important; 
     filter: invert(0.65) !important;
   }
 }
