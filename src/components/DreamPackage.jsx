@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Camera, Film, CheckCircle2, Clock, Calendar, Users, ShoppingBag, Plus } from 'lucide-react';
 
 const EVENTS_LIST = [
-  'Engagement', 'Haldi', 'Mehndi', 'Fixation Ceremony', 'Wedding Eve', 'Wedding Day', 'Reception'
+  'Engagement', 'Betrothal', 'Haldi', 'Mehndi', 'Fixation Ceremony', 'Wedding Eve', 'Wedding Day', 'Reception'
 ];
 
 export default function DreamPackage({ onCheckout }) {
