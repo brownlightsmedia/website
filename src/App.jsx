@@ -71,7 +71,7 @@ export default function App() {
 
   const isTransitioningRef = useRef(false);
   const pageRefs = useRef([]);
-  const pagesCount = 9;
+  const pagesCount = 8;
 
   // Turn Sketchbook Page (rotateX vertical portrait flip engine)
   const turnSketchbookPageTo = (targetIdx) => {
