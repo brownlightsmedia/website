@@ -11,17 +11,20 @@ async function processDirectory(directory) {
     
     if (stat.isDirectory()) {
       await processDirectory(fullPath);
-    } else if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png')) {
-      const tempPath = fullPath + '.tmp';
+    } else if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.webp')) {
       try {
-        await sharp(fullPath)
+        // Read file to buffer first to close the file handle instantly on Windows
+        const fileBuffer = fs.readFileSync(fullPath);
+        
+        // Process the in-memory buffer using sharp
+        const compressedBuffer = await sharp(fileBuffer)
           .resize({ width: 1200, withoutEnlargement: true })
-          .jpeg({ quality: 60, progressive: true })
-          .toFile(tempPath);
+          .jpeg({ quality: 60, progressive: true, force: false }) 
+          .webp({ quality: 60, force: false })
+          .toBuffer();
           
-        // Replace original with compressed version
-        fs.unlinkSync(fullPath);
-        fs.renameSync(tempPath, fullPath);
+        // Overwrite the original file
+        fs.writeFileSync(fullPath, compressedBuffer);
         console.log(`Compressed: ${fullPath}`);
       } catch (err) {
         console.error(`Error compressing ${fullPath}:`, err.message);
@@ -31,7 +34,7 @@ async function processDirectory(directory) {
 }
 
 const imagesDir = path.join(__dirname, 'public', 'assets', 'images');
-console.log('Starting compression...');
+console.log('Starting compression in memory...');
 processDirectory(imagesDir).then(() => {
   console.log('Compression complete.');
 });
