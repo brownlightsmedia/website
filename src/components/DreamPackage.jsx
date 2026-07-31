@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Film, CheckCircle2, Clock, Calendar, Users, ShoppingBag } from 'lucide-react';
+import { Camera, Film, CheckCircle2, Clock, Calendar, Users, ShoppingBag, Plus } from 'lucide-react';
 
 const EVENTS_LIST = [
   'Engagement', 'Haldi', 'Mehndi', 'Fixation Ceremony', 'Wedding Eve', 'Wedding Day', 'Reception'
@@ -8,6 +8,7 @@ const EVENTS_LIST = [
 export default function DreamPackage({ onCheckout }) {
   const [showBuilder, setShowBuilder] = useState(false);
   const [numDays, setNumDays] = useState(1);
+  const [isCustomDays, setIsCustomDays] = useState(false);
   const [daysConfig, setDaysConfig] = useState([
       { id: 1, events: [] }
   ]);
@@ -17,7 +18,7 @@ export default function DreamPackage({ onCheckout }) {
   const [highlightVideo, setHighlightVideo] = useState('3-6 mins');
   const [albumPages, setAlbumPages] = useState('40 leaves (80 pages)');
 
-  const handleNumDaysChange = (newNum) => {
+  const updateNumDays = (newNum) => {
     setNumDays(newNum);
     const newConfig = [...daysConfig];
     if (newNum > newConfig.length) {
@@ -28,6 +29,20 @@ export default function DreamPackage({ onCheckout }) {
       newConfig.length = newNum;
     }
     setDaysConfig(newConfig);
+  };
+
+  const handleNumDaysChange = (option) => {
+    if (option === 'more') {
+      setIsCustomDays(true);
+      if (daysConfig.length < 5) updateNumDays(5);
+    } else {
+      setIsCustomDays(false);
+      updateNumDays(option);
+    }
+  };
+
+  const handleAddDay = () => {
+    updateNumDays(numDays + 1);
   };
 
   const toggleEvent = (dayIndex, eventName) => {
@@ -99,18 +114,18 @@ export default function DreamPackage({ onCheckout }) {
             <div style={{ marginBottom: '3rem', background: 'rgba(0,0,0,0.02)', padding: '2rem', borderRadius: '12px' }}>
         <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Calendar size={20} color="var(--accent-gold)"/> 1. Program Duration</h3>
         <label style={{ display: 'block', fontSize: '0.9rem', marginBottom: '0.8rem', color: 'var(--text-secondary)' }}>How many days is the program?</label>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            {[1, 2, 3, 4, 5].map(num => (
-                <button 
-                    key={num}
-                    onClick={() => handleNumDaysChange(num)}
-                    className={numDays === num ? 'btn btn-gold' : 'btn btn-outline'}
-                    style={{ flex: 1, padding: '0.8rem' }}
-                >
-                    {num} {num === 1 ? 'Day' : 'Days'}
-                </button>
-            ))}
-        </div>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              {[1, 2, 3, 4, 'more'].map(option => (
+                  <button 
+                      key={option}
+                      onClick={() => handleNumDaysChange(option)}
+                      className={(option === 'more' && isCustomDays) || (!isCustomDays && numDays === option) ? 'btn btn-gold' : 'btn btn-outline'}
+                      style={{ flex: 1, padding: '0.8rem', minWidth: '80px' }}
+                  >
+                      {option === 'more' ? '>4 Days' : `${option} Day${option > 1 ? 's' : ''}`}
+                  </button>
+              ))}
+          </div>
       </div>
 
       {/* Step 2 & 3: Events & Crew Config */}
@@ -161,7 +176,7 @@ export default function DreamPackage({ onCheckout }) {
                                 {/* Crew Selection */}
                                 <div>
                                     <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}><Users size={14}/> Crew Selection</label>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                                    <div className="crew-grid">
                                         {/* Photographers */}
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#fff', padding: '0.6rem', border: '1px solid var(--border-light)', borderRadius: '6px' }}>
                                             <span style={{ fontSize: '0.8rem' }}>Photographers</span>
@@ -188,6 +203,11 @@ export default function DreamPackage({ onCheckout }) {
                 )}
             </div>
         ))}
+        {isCustomDays && (
+            <button onClick={handleAddDay} className="btn btn-outline full-width" style={{ marginTop: '1rem', padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
+                <Plus size={18} /> Add Day {numDays + 1}
+            </button>
+        )}
       </div>
 
       <div style={{ height: '1px', background: 'var(--border-light)', margin: '2rem 0' }}></div>

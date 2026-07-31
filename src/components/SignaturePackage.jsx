@@ -32,19 +32,19 @@ export default function SignaturePackage({ onCheckout }) {
 
       <div style={{ marginBottom: '3rem' }}>
         <h3 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Camera size={20} color="var(--accent-gold)"/> The Crew</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+        <div className="signature-crew-grid">
             <div>
                 <h4 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--text-secondary)' }}>Wedding Eve</h4>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    <li style={{ fontSize: '0.9rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Photographer</li>
-                    <li style={{ fontSize: '0.9rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Cinematographer</li>
+                    <li className="crew-list-item"><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Photographer</li>
+                    <li className="crew-list-item"><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Cinematographer</li>
                 </ul>
             </div>
             <div>
                 <h4 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--text-secondary)' }}>Wedding Day</h4>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    <li style={{ fontSize: '0.9rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Photographer</li>
-                    <li style={{ fontSize: '0.9rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Cinematographer</li>
+                    <li className="crew-list-item"><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Photographer</li>
+                    <li className="crew-list-item"><CheckCircle2 size={14} color="var(--accent-gold)"/> 1 Lead Candid Cinematographer</li>
                 </ul>
             </div>
         </div>
