@@ -86,7 +86,7 @@ New Studio Inquiry:
                   </div>
                   <div>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, letterSpacing: '0.1em' }}>OFFICIAL INQUIRIES</span>
-                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>hello@brownlightmedia.com</h4>
+                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>brownlightmedia@gmail.com</h4>
                   </div>
                 </div>
 
@@ -96,24 +96,9 @@ New Studio Inquiry:
                   </div>
                   <div>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, letterSpacing: '0.1em' }}>STUDIO LOCATION</span>
-                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>Kochi & Kozhikode, Kerala</h4>
+                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600 }}>Kozhikode, Kerala</h4>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Studio Commitment Guarantees */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div style={{ background: '#fff', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-md)', padding: '1.2rem' }}>
-                <ShieldCheck size={22} color="#C69B66" style={{ marginBottom: '0.4rem' }} />
-                <h5 style={{ fontSize: '0.88rem', fontWeight: 700 }}>Transparent Pricing</h5>
-                <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Zero hidden costs or fees.</p>
-              </div>
-
-              <div style={{ background: '#fff', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-md)', padding: '1.2rem' }}>
-                <Clock size={22} color="#C69B66" style={{ marginBottom: '0.4rem' }} />
-                <h5 style={{ fontSize: '0.88rem', fontWeight: 700 }}>Fast Delivery</h5>
-                <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Previews delivered in 7 days.</p>
               </div>
             </div>
           </div>
@@ -139,7 +124,7 @@ New Studio Inquiry:
               <form onSubmit={handleSubmit}>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1.5rem' }}>Send a Message</h3>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="contact-form-grid">
                   <input
                     type="text"
                     className="form-input"
@@ -158,7 +143,7 @@ New Studio Inquiry:
                   />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="contact-form-grid">
                   <input
                     type="tel"
                     className="form-input"

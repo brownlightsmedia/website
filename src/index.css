@@ -827,3 +827,15 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
