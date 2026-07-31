@@ -11,7 +11,7 @@ async function processDirectory(directory) {
     
     if (stat.isDirectory()) {
       await processDirectory(fullPath);
-    } else if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.webp')) {
+    } else if ((file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.webp')) && !file.toLowerCase().includes('logo')) {
       try {
         // Read file to buffer first to close the file handle instantly on Windows
         const fileBuffer = fs.readFileSync(fullPath);
