@@ -384,9 +384,10 @@ const galleryPhotos = [
   { id: 378, title: 'vishnu & divya', location: 'Kerala', category: 'weddings', src: '/website/assets/images/vishnu%20%26%20divya/IMG_8652.JPG' }
 ];
 
-export default function Gallery({ isActive }) {
+export default function Gallery({ isActive, onOpenLightbox }) {
   const [activeAlbum, setActiveAlbum] = useState(null);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [showAllAlbums, setShowAllAlbums] = useState(false);
 
   React.useEffect(() => {
     if (!isActive) {
